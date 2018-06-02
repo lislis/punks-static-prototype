@@ -1,0 +1,128 @@
+@import "styles/normalize"
+
+$white: #ddd
+$grey: #aaa
+$black: #222
+
+$header-height: 60px
+$content-width: 900px
+
+*, *:after, *:before
+  box-sizing: border-box
+
+body
+  line-height: 1.7
+  font-family: sans-serif
+  background-size: cover
+  background-image: url(assets/background.jpeg)
+
+.burrito
+  display: flex
+  flex-flow: column nowrap
+
+  main
+    flex-grow: 1
+
+.topbar,
+.footer
+  height: $header-height
+  background-color: $black
+
+.inner
+  max-width: $content-width
+  margin: auto
+
+  @media (max-width: $content-width)
+    padding-left: 2em
+    padding-right: 2em
+
+.logo
+  text-transform: uppercase
+
+.page-header
+  padding: 7rem 0
+  text-align: center
+  text-transform: uppercase
+  h1
+    font-size: 3.3rem
+    line-height: 1
+    color: $white
+    margin: 0
+  p
+    margin: 0
+
+.banner
+  display: inline-block
+  padding: .2em
+  font-size: 1.6rem
+  font-weight: 600
+  line-height: 1
+  letter-spacing: -2px
+  text-transform: uppercase
+  background-color: $white
+  color: $black
+
+.main
+  display: flex
+  padding-bottom: 5rem
+
+  @media (max-width: $content-width)
+    flex-direction: column
+
+.main__main
+  flex: 2
+  padding-right: 4em
+
+.main__aside
+  flex: 1
+
+.nav
+  margin: 0
+  padding: 0
+  display: flex
+  color: $white
+  list-style: none
+
+  li
+    margin-right: 2rem
+
+  a
+    display: block
+    height: $header-height
+    padding: .5em .5em 0
+    line-height: 2.8
+    font-weight: 600
+    color: $white
+    text-decoration: none
+    border-bottom: 3px solid transparent
+
+    &:hover
+      border-color: $white
+
+.news-list
+  list-style: none
+  padding: 0
+  color: $white
+
+  p, h3
+    padding: .5rem
+    background-color: $black
+
+  li
+    margin-bottom: 7em
+
+  a
+    color: $white
+
+.main__aside
+  p,
+  h3
+    padding: .5rem
+    background-color: $black
+    color: $white
+
+.news__date
+  color: $grey
+
+.inline
+  display: inline-block
